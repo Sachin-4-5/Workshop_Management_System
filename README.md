@@ -9,8 +9,7 @@ This solution follows a **layered architecture**—ensuring separation of concer
 
 
 ## 📘 Description
-This project was developed as part of a comprehensive Udemy training course titled **“ASP.NET Web Forms Live Project”**.  
-The goal was to simulate a real-time **Workshop Management System**, where admins, students, and trainers interact with the application based on their roles and permissions.
+This project was developed as part of a comprehensive Udemy training course titled **“ASP.NET Web Forms Live Project”**. The goal was to simulate a real-time **Workshop Management System**, where admins, students, and trainers interact with the application based on their roles and permissions.
 
 The course focused on building enterprise-grade web applications by applying a **multi-tier architecture**.  
 The solution includes the following layers:
@@ -28,8 +27,8 @@ The solution includes the following layers:
 ✅ Admins can create, update, and delete workshop details such as title, date, duration, and topics. <br/>
 ✅ Admins can upload training materials in `.zip` format. Students can download materials after approval.<br/>
 ✅ Admins and students can change their passwords; Admins can reset student passwords.<br/>
-✅ Students can register for workshops. Admins can view and approve/reject registrations.<br/>
-✅ Student can view, edit and delete their own details and can change their password, download material and view the status of request.<br/>
+✅ Students can register for workshops and download materials. Admins can view and approve/reject registrations.<br/>
+✅ Student can view, edit and delete their own details and can change their password and view the status of request.<br/>
 ✅ Complete Create, Read, Update, and Delete functionality implemented using ADO.NET and Web Forms.<br/>
 ✅ Application follows a multi-tier structure for separation of concerns: Presentation layer, Business logic layer, Business object layer and Data access layer.
 
