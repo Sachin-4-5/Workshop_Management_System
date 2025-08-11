@@ -1,110 +1,103 @@
-# WorkShop Management Portal 
+# WorkShop Management System 
 
 ## 📖 Overview  
-A web-based ASP.NET application to manage workshops, trainers, students, materials, and approvals.  
-This solution follows a **layered architecture**—ensuring separation of concerns, maintainability, and scalability. It demonstrates the practical implementation of a real-world system using **ASP.NET Web Forms** and **ADO.NET** for database operations.
+An ASP.NET Web Forms application for managing workshops, registrations, and users with role-based access.
 
 ---
 <br />
 
 
-## 📘 Description
-This project was developed as part of a comprehensive Udemy training course titled **“ASP.NET Web Forms Live Project”**. The goal was to simulate a real-time **Workshop Management System**, where admins, students, and trainers interact with the application based on their roles and permissions.
+## 📘 Project Overview
+This system allows:
+- Admins to create and manage workshops.
+- Users to register and view available workshops.
+- Role-based access control (Admin and User roles).
+- Secure user registration and login functionality.
+- Responsive UI with Bootstrap for a clean and modern look.
 
-The course focused on building enterprise-grade web applications by applying a **multi-tier architecture**.  
-The solution includes the following layers:
-- Business Logic Layer (BLL) – Contains core business rules and logic  
-- Business Object Layer (BO) – Defines object models for data transfer  
-- Data Access Layer (DAL) – Handles all database interactions via ADO.NET  
-- Presentation Layer (UI) – Built using ASP.NET Web Forms (Web UI)
+---
+<br />
+
+
+## 🛠 Technology used
+- ASP.NET Web Forms (.NET Framework 4.7.2)
+- C#
+- SQL Server (Database: WorkshopDB)
+- ADO.NET for data access
+- Bootstrap 4 for responsive UI
+- IIS for local hosting and deployment
 
 ---
 <br />
 
 
 ## 🚀 Features  
-✅ Admins and students access features based on assigned roles and permissions. <br />
-✅ Admins can create, update, and delete workshop details such as title, date, duration, and topics. <br/>
-✅ Admins can upload training materials in `.zip` format. Students can download materials after approval.<br/>
-✅ Admins and students can change their passwords; Admins can reset student passwords.<br/>
-✅ Students can register for workshops and download materials. Admins can view and approve/reject registrations.<br/>
-✅ Student can view, edit and delete their own details and can change their password and view the status of request.<br/>
-✅ Complete Create, Read, Update, and Delete functionality implemented using ADO.NET and Web Forms.<br/>
-✅ Application follows a multi-tier structure for separation of concerns: Presentation layer, Business logic layer, Business object layer and Data access layer.
+✅ User registration and login with password hashing. <br />
+✅ Admin dashboard to add, edit, and delete workshops. <br />
+✅ Workshop listing with registration buttons. <br />
+✅ Users can view their registrations. <br />
+✅ Role-based UI changes (e.g., only admins see workshop management options). <br />
+✅ Session management for user authentication. <br />
+✅ Application built using a 3-tier architecture for separation of concerns: Presentation layer (UI), Business logic layer, Data access layer. <br />
 
 ---
 <br />
 
 
-
-## 🎓 Project Plan (stpe-by-step implementation)  
-✅ Gathering requirements. <br />
-✅ Defining the roles and responsibilities. <br/>
-✅ Identifyin the objects.<br/>
-✅ Creating the relationships.<br/>
-✅ Implementing the database.<br/>
-✅ Inserting few dummy records.<br/>
-✅ Designing project architecture.<br/>
-✅ Creating ASP.NET Web Form Empty Solution and adding projects (class library - .dll) to it.<br/>
-✅ Creating business object (defining classes with same name for each tables).<br/>
-✅ Creating presentation layer (defining table, gridview, buttons, etc.,).<br/>
-✅ Creating business logic layer.<br/>
-✅ Creating data access layer (CRUD operation in database using ADO.NET).<br/>
-✅ Form validation.<br/>
-✅ Business rule validation.<br/>
-✅ Authentication <br/>
-✅ Authorization <br/>
-✅ AJAX implementation (to overcome reload) <br/>
-✅ Publishing the project <br/>
-
----
-<br />
-
-
-
-## 🛠 Tech stack
-- C#
-- ASP.NET Web Form
-- MS SQL Server (T-SQL)
-- ADO.NET
-- AJAX
-
----
-<br />
-
-
-
-## Project structure
+## 🎓 Project structure
 ```
-│── DataLoader\
-    │── DataLoader\
-        │── \bin
-        │── \obj
-        │── \Properties
-        │── App.config
-        │── Program.cs
-        │── PreProcessor.cs
-        │── DataLoadTemplate.cs
-        │── DataLoadInfo.cs
-        │── DataLoader.cs
-        │── Enumeration.cs
-        │── Archive.cs
-        │── DataLoader.csproj
-    │── ErrorLogger
-    │── Mailer
-    │── DataLoader.sln
+│── WorkshopManagementSystem\
+    │── packages
+    │── WorkshopManagementSystem.BLL (Class Library)
+        │── bin\
+        │── obj\
+        │── Properties\
+        │── RegistrationService.cs
+        │── UserService.cs
+        │── WorkshopService.cs
+        │── WorkshopManagementSystem.BLL.csproj
 
-│── ProdData\  
-    │── Archive
-    │── Incoming
-    │── Logs
+    │── WorkshopManagementSystem.DAL (Class Library)
+        │── bin\
+        │── obj\
+        │── Properties\
+        │── DbHelper.cs
+        │── UserRepository.cs
+        │── RegistrationRepository.cs
+        │── WorkshopRepository.cs
+        │── WorkshopManagementSystem.DAL.csproj
+
+    │── WorkshopManagementSystem.Models (Class Library)
+        │── bin\
+        │── obj\
+        │── Properties\
+        │── User
+        │── Role
+        │── Registration
+        │── Workshop
+        │── WorkshopManagementSystem.Models.csproj
+
+    │── WorkshopManagementSystem.UI (ASP.NET Web Form)
+        │── bin\
+        │── obj\
+        │── Properties\
+        │── AppData\
+        │── AppStart\
+        │── Connected Services\
+        │── Content\
+        │── Script\
+        │── Register.aspx
+        │── Login.aspx
+        │── Default.aspx
+        │── Site.Master
+        │── Global.asax
+        │── Web.config
+        │── WorkshopManagementSystem.UI.csproj
+        │── WorkshopManagementSystem.UI.csproj.user
+
+    │── WorkshopManagementSystem.sln
     
-│── ProdApps\
-    │── Executable
-    │── Maestro
-    │── Templates
-    
-│── script.sql
+│── DbScript.sql
 │── Readme.md
 ```
 
@@ -114,11 +107,10 @@ The solution includes the following layers:
 
 
 ## 💡 Future Enhancements
-🔹 Responsive UI with Bootstrap. <br />
-🔹 Email Notifications on registration, workshop approvals, and password changes. <br />
-🔹 Enable downloading of workshop participation certificates in PDF format. <br />
-🔹 Visual calendar for scheduling and viewing upcoming workshops. <br />
-🔹 Deployment - Host the project on IIS or Azure App Service for online access.
+🔹 Implement email notifications for registration. <br />
+🔹 Add pagination and search on workshop listings. <br />
+🔹 Improve security by implementing OAuth or JWT authentication. <br />
+🔹 Enhance UI/UX with modern frontend frameworks. <br />
 
 ---
 <br />
@@ -126,13 +118,19 @@ The solution includes the following layers:
 
 
 ## ▶️ How to run the project ?
-1️⃣ Clone the Repository - <b>git clone https://github.com/Sachin-4-5/workshop-management-portal.git</b> <br />
-2️⃣ Open WorkshopManagementPortal.sln in Visual Studio (recommended version: 2017 or later). <br />
-3️⃣ Execute the SQL scripts provided under the /Database folder to create tables and relationships. <br />
-4️⃣ Open Web.config in the UI project - update the ConnectioString as per your need. <br />
-5️⃣ Build the entire solution to restore DLL references. <br />
-6️⃣ Set the UI project as the startup project. <br >
-7️⃣ Press F5 or click Start to run the application.
+1️⃣ Clone the Repository - <b>git clone https://github.com/Sachin-4-5/workshop-management-system.git</b> <br />
+2️⃣ Execute the provided SQL script to create WorkshopDB with necessary tables and seed data. <br>
+3️⃣ Open WorkshopManagementSystem.sln in Visual Studio (recommended version: 2017 or later). <br />
+4️⃣ Update the connection string in web.config with your SQL Server instance details and authentication mode. <br />
+5️⃣ Set the UI project as the startup project. <br >
+6️⃣ Build the entire solution to restore DLL references. <br />
+7️⃣ Publish the WorkshopManagementSystem.UI project to a local folder (e.g., C:\inetpub\wwwroot\WorkshopManagementSystem). <br />
+8️⃣ Press F5 or click Start to run the application through VS built-in IIS Server. <b>or</b> <br />
+9️⃣ IIS Setup: <br />
+    🔹Create a new site in IIS pointing to the published folder. <br />
+    🔹Assign an application pool with .NET CLR Version v4.0 and set identity with appropriate DB access. <br />
+    🔹Set folder permissions for the app pool identity. <br />
+🔟 Access the site via your configured URL and port.
 
 ---
 <br />
@@ -151,12 +149,6 @@ Pull requests are welcome! To contribute:
 ---
 <br />
 <br />
-
-
-
-
-
-
 
 
 
