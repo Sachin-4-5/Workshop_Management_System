@@ -27,7 +27,7 @@ This system allows: <br />
 🔹Built responsive UI with Bootstrap integration for improved user experience across devices. <br />
 🔹Implemented CRUD operations for workshops, enabling admins to add, edit, and delete workshop entries. <br />
 🔹Developed session management and navigation controls based on user roles. <br />
-🔹Configured local IIS deployment, including setting up application pools, folder permissions, and database connectivity. <br />
+🔹Configured local IIS deployment, including application pools setting, folder permissions, and db connectivity. <br />
 🔹Handled common web application concerns like error handling, data validation, and secure database access. <br />
 
 ---
