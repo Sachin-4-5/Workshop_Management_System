@@ -8,32 +8,6 @@ IIS URL Example (my local machine server) - http://localhost:8080/
 <br />
 
 
-## 📘 Project Overview
-This system allows: <br />
-🔹Admins to create and manage workshops. <br />
-🔹Users to register and view available workshops. <br />
-🔹Role-based access control (Admin and User roles). <br />
-🔹Secure user registration and login functionality. <br />
-🔹Responsive UI with Bootstrap for a clean and modern look.
-
----
-<br />
-
-
-## 🎓 Main Tasks Accomplished
-🔹Designed and implemented a 3-tier architecture for better maintainability and scalability. <br />
-🔹Created a relational database schema with tables for Roles, Users, Workshops, and Registrations. <br />
-🔹Developed secure user authentication with password hashing and role-based access control (Admin/User). <br />
-🔹Built responsive UI with Bootstrap integration for improved user experience across devices. <br />
-🔹Implemented CRUD operations for workshops, enabling admins to add, edit, and delete workshop entries. <br />
-🔹Developed session management and navigation controls based on user roles. <br />
-🔹Configured local IIS deployment, including application pools setting, folder permissions, and db connectivity. <br />
-🔹Handled common web application concerns like error handling, data validation, and secure database access. <br />
-
----
-<br />
-
-
 ## 🎓 Key Learnings
 🔹Practical application of 3-tier architecture concepts in ASP.NET Web Forms. <br />
 🔹Managing state and security in Web Forms applications using sessions and role-based UI. <br />
